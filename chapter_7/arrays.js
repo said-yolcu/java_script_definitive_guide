@@ -66,6 +66,15 @@ arr.unshift('beginning')
 arr.pop()
 // shift(), removes and returns the first element, decrements the length
 arr.shift()
+// push and pop are more efficient than unshift and shift
+a= []
+a.unshift(1)
+a.unshift(2)
+console.log(`a is ${a}`)
+a=[]
+a.unshift(1,2)
+console.log(`a is ${a}`)
+// they are not equivalent
 
 arr[10]= undefined
 console.log(arr)
