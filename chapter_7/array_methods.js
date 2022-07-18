@@ -27,7 +27,8 @@ console.log(dense)
 console.log(dense.find((v, i) => v * dense[i + 1] === 12))
 console.log(dense.findIndex((v, i) => v * dense[i + 1] === 12))
 
-// every() and some() return true or false for existence of a condition
+// every() and some() return true or false for existence of a 
+// condition
 data = [1, 4, 7, 9, 22, 55, 87]
 console.log(data.every(v => v < 90))
 console.log(data.some(v => v % 5 === 4))
@@ -58,15 +59,18 @@ console.log(nums.map(elem => elem < 0 ? [] : Math.sqrt(elem)))
 console.log(nums.flatMap(elem => elem < 0 ? [] : Math.sqrt(elem)))
 
 // concat()
+console.log('Concat')
 a = [1, 2, 3]
 console.log(a.concat(5, 6))
 console.log(a.concat(1, 2, [3], [4, [5, 6]]))
 
 // slice() does not modify the array
+console.log('Slice')
 a = [1, 2, 3, 4, 5, 6, 7, 8]
 console.log('a is: ' + a.slice(4, 8))
 console.log(a)
 // remove 2 elements from index 4 on
+console.log('Splice')
 console.log(a.splice(4, 2))
 console.log(a)
 // remove 2 elements from index 4 on, then add the written elements
@@ -76,9 +80,11 @@ console.log(a.splice(2, 0, 'k', 'l'))
 console.log(a)
 
 // fill()
+console.log('Fill')
 a = new Array(7)
 console.log(a)
 a.fill(0)
+// fill indexes 2 to -2 with 1 
 a.fill(1, 2, -2)
 console.log(a)
 
@@ -123,6 +129,7 @@ console.log(`Num is ${num}`)
 
 // includes() looks for existence of an element
 // in looks for existence of index/property
+console.log('Include')
 a = [1, 0, true, NaN, Infinity, null]
 console.log(a.includes(0))
 console.log(a.includes(null))
@@ -131,6 +138,7 @@ console.log(a.includes(Infinity))
 
 // sort(), if callbacks return value is < 0,
 // elem_1 comes before elem_2
+console.log('Sort')
 /*
 callback(elem_1, elem_2){
     return value 
@@ -147,6 +155,45 @@ a.sort(() => 1)
 console.log(a)
 
 //reverse()
+console.log('Reverse')
 a = [1, 9, 8, 4]
 a.reverse()
 console.log(a)
+
+// join()
+console.log('Join')
+a = [1, 2, 3,]
+console.log(a.join())
+a = [, , , 3, 4, , ,]
+console.log(a.join('-'))
+a = new Array(10)
+console.log(a.join(':)'))
+
+// toString works identical to join method
+console.log('toString')
+a = [1, 2, b, console.log, 3, 4, , 5,]
+console.log(a.join())
+console.log(a.toString())
+console.log(a.toLocaleString())
+// what is the difference of join, toString, toLocaleString?
+
+// isArray()
+console.log('\nIsArray')
+console.log(
+    `${Array.isArray(a)}
+${Array.isArray(new Object())}
+${Array.isArray(new Array())}
+${Array.isArray({})}`)
+
+// Array-like objects
+// If an objects property names are integers and has a length
+// property. It can be handled as almost like an array
+console.log('\nArray-like objects')
+a = { 0: 'sifir', 1: 'bir', 2: 'iki', 5: 'bes', length: 10 }
+
+// array methods can be called indirectly
+// i.e with call() method
+console.log(Array.prototype.join.call(a, '+'))
+b = Array.from(a)
+console.log(b)
+
