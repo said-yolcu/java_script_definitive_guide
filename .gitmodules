@@ -10,3 +10,6 @@
 [submodule "chapter_11"]
 	path = chapter_11
 	url = https://github.com/said-yolcu/def_gui_chapter_11.git
+[submodule "chapter_12"]
+	path = chapter_12
+	url = https://github.com/said-yolcu/def_gui_chapter_12.git
