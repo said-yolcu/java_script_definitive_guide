@@ -16,3 +16,6 @@
 [submodule "chapter_13"]
 	path = chapter_13
 	url = https://github.com/said-yolcu/def_gui_chapter_13.git
+[submodule "chapter_14"]
+	path = chapter_14
+	url = https://github.com/said-yolcu/def_gui_chapter_14.git
